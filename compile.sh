@@ -1,6 +1,7 @@
 set -e
 
-mkdir -p build
+rm -r build
+mkdir build
 pushd .
 cd build
 cmake ..
