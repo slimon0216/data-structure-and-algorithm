@@ -10,6 +10,9 @@ else()
 endif(CCACHE_FOUND)
 
 
+project(SomeProject)
+
+
 project(DSA)
 
 
