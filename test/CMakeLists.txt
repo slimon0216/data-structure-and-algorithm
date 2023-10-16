@@ -7,6 +7,11 @@ add_executable(
   heap_test.cpp
 )
 
+add_executable(
+  sort_test 
+  sort_test.cpp
+)
+
 target_include_directories(
   heap_test PRIVATE
   "../src"
@@ -17,7 +22,13 @@ target_link_libraries(
   GTest::gtest_main
 )
 
+target_link_libraries(
+  sort_test
+  GTest::gtest_main
+)
+
 message("${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
 
 include(GoogleTest)
 gtest_discover_tests(heap_test)
+gtest_discover_tests(sort_test)
